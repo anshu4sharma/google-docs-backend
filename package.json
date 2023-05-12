@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "mongoose": "^7.1.1",
     "socket.io": "^4.6.1"
   }

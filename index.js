@@ -3,10 +3,12 @@ import { Server } from "socket.io";
 const httpServer = createServer();
 import mongoose from "mongoose";
 import Document from "./model/Document.js";
+import * as dotenv from 'dotenv' 
+dotenv.config()
 async function connectToMongoDB() {
   try {
     await mongoose
-      .connect("mongodb://127.0.0.1:27017/test")
+      .connect(process.env.DATABASE_URL)
       .then(() => console.log("Connected!"));
   } catch (error) {
     console.error("Error connecting to MongoDB:", error);
